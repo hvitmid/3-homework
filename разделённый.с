@@ -6,7 +6,7 @@
 
 double name(int poundkg)
 {
-	int poundkg;double result;
+double result;
 result = Fkg * poundkg;
 return result;
 }
@@ -18,5 +18,5 @@ void main(void)
 	puts("введите фунты для перевода в килограммы");
 	scanf("%d", &poundkg);
 	result = name(poundkg);
-	printf("%d фунтов – это % 9.1f кг\n", poundkg, result);
+	printf("%d фунтов – это % 9.1lf кг\n", poundkg, result);
 }
