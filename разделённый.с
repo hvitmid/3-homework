@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <locale.h>
+#define Fkg 0.453592
+#define Fg 453.592
+#define Ft 0.0004535
+
+double name(int poundkg)
+{
+	int poundkg;double result;
+result = Fkg * poundkg;
+return result;
+}
+void main(void)
+{
+	setlocale(LC_ALL, "RUS");
+	int poundkg; 
+	double result;
+	puts("введите фунты для перевода в килограммы");
+	scanf("%d", &poundkg);
+	result = name(poundkg);
+	printf("%d фунтов – это % 9.1f кг\n", poundkg, result);
+}
